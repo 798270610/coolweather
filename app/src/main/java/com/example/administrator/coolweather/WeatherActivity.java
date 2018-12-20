@@ -38,7 +38,7 @@ public class WeatherActivity extends AppCompatActivity {
     private TextView aqiText;
     private TextView pm25Text;
     private TextView comfortText;
-    //private TextView carWashText;
+    private TextView carWashText;
     private TextView sportText;
     private ImageView bingPicImg;
 
@@ -62,6 +62,7 @@ public class WeatherActivity extends AppCompatActivity {
         pm25Text=(TextView)findViewById(R.id.pm25_text);
         comfortText=(TextView)findViewById(R.id.comfort_text);
         sportText=(TextView)findViewById(R.id.sport_text);
+        carWashText=(TextView)findViewById(R.id.car_wash_text);
         bingPicImg=(ImageView) findViewById(R.id.bing_pic_img);
 
         SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(this);
@@ -182,7 +183,7 @@ public class WeatherActivity extends AppCompatActivity {
         String carWash="洗车指数:"+weather.suggestion.carWash.info;
         String sport="运动建议:"+weather.suggestion.sport.info;
         comfortText.setText(comfort);
-        //carWashText.setText(carWash);
+        carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
     }
